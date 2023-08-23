@@ -2,7 +2,7 @@
  * CSC232 - Data Structures
  * Missouri State University, Spring 2023
  *
- * @file    csc232.hpp
+ * @file    csc232.h
  * @author  Jim Daehn <jdaehn@missouristate.edu>
  * @brief   Macros, libraries and definitions for use in csc232 assignments.
  * @version 0.2023.04.10
@@ -19,9 +19,9 @@
 
 #define EXECUTE_PREAMBLE FALSE
 
-#define TEST_TASK1 FALSE
-#define TEST_TASK2 FALSE
-#define TEST_TASK3 FALSE
+#define TEST_TASK01 FALSE
+#define TEST_TASK02 FALSE
+#define TEST_TASK03 FALSE
 
 #include <algorithm>
 #include <cassert>
