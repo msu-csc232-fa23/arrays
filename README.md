@@ -64,8 +64,8 @@ Noteworthy observations:
 
 ### Task 2: Declare and process a multidimensional array
 
-1. Let's begin by examining the declarations in [task02.h](include/task02.h).
-2. Next, let's examine the code in [task02.cpp](src/main/cpp/task02.cpp).
+1. Let us again begin by examining the declarations in [task02.h](include/task02.h).
+2. And now, let's examine the code in [task02.cpp](src/main/cpp/task02.cpp).
 
 Noteworthy observations:
 
@@ -76,11 +76,9 @@ Noteworthy observations:
 
 ### Task 3: Declare and process strings
 
-1. Let's begin by examining the declarations in [task03.h](include/task02.h).
-2. Next, let's examine the code in [task03.cpp](src/main/cpp/task02.cpp).
+1. Finally, let's examine the code in [task03.cpp](src/main/cpp/task02.cpp).
 
 Noteworthy observations:
 
-- Something
-- Cool
-- Or noteworthy
+- There are myriad string operations
+- String positions begin at position 0

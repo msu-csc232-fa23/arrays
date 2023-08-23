@@ -2,8 +2,8 @@
 * @file task01.cpp
 * @author Jim Daehn (jdaehn@missouristate.edu)
 * @brief Entry-point of the main target.
-* @version 0.1.1
-* @date 2022-02-23
+* @version 0.2023.08.23
+* @date 8/23/2023
 *
 * @copyright Copyright (c) 2022
 */
@@ -21,5 +21,30 @@ int main()
     std::cout << "The average weekly temperature is: " << avg << std::endl;
     std::cout << "The max of the maximum weekly temperatures is: " << max << std::endl;
 
-    return EXIT_SUCCESS;75.0
+    return EXIT_SUCCESS;
+}
+
+/* Function definitions of functions declared in corresponding header file */
+
+double getAverageTemp(const ArrayType temperatures, int n)
+{
+    double temp_sum = 0;
+    for (int index = 0; index < n; index += 1)
+    {
+        temp_sum += temperatures[index];
+    }
+    return temp_sum / n;
+}
+
+double getMaxTemp(const ArrayType temperatures, int n)
+{
+    double temp_max = temperatures[0]; // assume the max temp is the first element
+    for (int index = 1; index < n; index += 1)
+    {
+        if (temperatures[index] > temp_max)
+        {
+            temp_max = temperatures[index];
+        }
+    }
+    return temp_max;
 }

@@ -1,6 +1,16 @@
-//
-// Created by jdaehn on 8/22/23.
-//
+/**
+ * CSC232 - Data Structures
+ * Missouri State University, Fall 2023
+ *
+ * @file    task01.h
+ * @author  Jim Daehn <jdaehn@missouristate.edu>
+ * @brief   Specification file demonstrating function declaration and definitions of functions that process
+ *          one-dimensional arrays.
+ * @version 0.2023.08.23
+ * @date    08/23/2023
+ *
+ * @copyright Copyright (c) 2023 James R. Daehn
+ */
 
 #ifndef ICE01_TASK01_H
 #define ICE01_TASK01_H
@@ -29,31 +39,5 @@ double getAverageTemp(const ArrayType temperatures, int n);
  * @return the maximum temperature of the first n temperatures in the given array
  */
 double getMaxTemp(const ArrayType temperatures, int n);
-
-/**
- * Function definition.
- */
-double getAverageTemp(const ArrayType temperatures, int n)
-{
-    double temp_sum = 0;
-    for (int index = 0; index < n; index += 1)
-    {
-        temp_sum += temperatures[index];
-    }
-    return temp_sum / n;
-}
-
-double getMaxTemp(const ArrayType temperatures, int n)
-{
-    double temp_max = temperatures[0]; // assume the max temp is the first element
-    for (int index = 1; index < n; index += 1)
-    {
-        if (temperatures[index] > temp_max)
-        {
-            temp_max = temperatures[index];
-        }
-    }
-    return temp_max;
-}
 
 #endif //ICE01_TASK01_H
