@@ -12,5 +12,14 @@
 
 int main()
 {
-    return 0;
+    TempsTable temperatures;
+
+    loadTableData("task02_data.txt", temperatures, DAYS_PER_WEEK, WEEKS_PER_YEAR);
+    double avg = getAverageTemp(temperatures, DAYS_PER_WEEK, WEEKS_PER_YEAR);
+    double max = getMaxTemp(temperatures, DAYS_PER_WEEK, WEEKS_PER_YEAR);
+
+    std::cout << "avg = " << avg << std::endl;
+    std::cout << "max = " << max << std::endl;
+
+    return EXIT_SUCCESS;
 }
