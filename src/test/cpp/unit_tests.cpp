@@ -24,6 +24,11 @@ namespace csc232
      */
     class CSC232BaseTestFixture : public ::testing::Test
     {
+    public:
+        CSC232BaseTestFixture() : buffer{std::stringstream{}}, sbuf{nullptr} {
+            // Intentionally empty; initialization done via initializer list
+        }
+
     protected:
         void SetUp ( ) override
         {
@@ -62,7 +67,7 @@ namespace csc232
         }
 
         // Reusable objects for each unit test in this test fixture and any of its children
-        std::stringstream buffer { };
+        std::stringstream buffer;
         std::streambuf* sbuf;
         /*
          * With the above in place, you can now have tests on output statements 
@@ -75,6 +80,7 @@ namespace csc232
          */
     };
 
+#if !TEST_TASK01
     TEST_F( CSC232BaseTestFixture, DISABLED_TestExpectedOutput )
     {
         std::cout << "Google Test" << std::endl;
@@ -96,6 +102,32 @@ namespace csc232
             assert( false ); // some line(s) of code that will cause a failed assertion
         }, ".*failed.*" );
     }
+#endif
+
+#if TEST_TASK01
+    class Task01TestFixture : public CSC232BaseTestFixture
+    {
+    public:
+        Task01TestFixture() = default;
+    };
+#endif
+
+#if TEST_TASK02
+    class Task02TestFixture : public CSC232BaseTestFixture
+    {
+    public:
+        Task02TestFixture() = default;
+    };
+#endif
+
+#if TEST_TASK03
+    class Task03TestFixture : public CSC232BaseTestFixture
+    {
+    public:
+        Task03TestFixture() = default;
+    };
+#endif
+
 } // end namespace
 
 int main ( int argc, char** argv )
